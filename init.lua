@@ -91,8 +91,8 @@ minetest.register_craft({
 	output = 'infinitytools:pickaxe',
 	recipe = {
 		{'infinitytools:infinityblock', 'infinitytools:infinityblock', 'infinitytools:infinityblock'},
-		{'', 'default:stickgroup:stick', ''},
-		{'', 'default:stickgroup:stick', ''},
+		{'', 'group:stick', ''},
+		{'', 'group:stick', ''},
 	}
 })
 
@@ -101,8 +101,8 @@ minetest.register_craft({
 	output = 'infinitytools:shovel',
 	recipe = {
 		{'', 'infinitytools:infinityblock', ''},
-		{'', 'default:stickgroup:stick', ''},
-		{'', 'default:stickgroup:stick', ''},
+		{'', 'group:stick', ''},
+		{'', 'group:stick', ''},
 	}
 })
 
@@ -111,8 +111,8 @@ minetest.register_craft({
 	output = 'infinitytools:axe',
 	recipe = {
 		{'infinitytools:infinityblock', 'infinitytools:infinityblock', ''},
-		{'infinitytools:infinityblock', 'default:stickgroup:stick', ''},
-		{'', 'default:stickgroup:stick', ''},
+		{'infinitytools:infinityblock', 'group:stick', ''},
+		{'', 'group:stick', ''},
 	}
 })
 
@@ -122,7 +122,7 @@ minetest.register_craft({
 	recipe = {
 		{'', 'infinitytools:infinityblock', ''},
 		{'', 'infinitytools:infinityblock', ''},
-		{'', 'default:stickgroup:stick', ''},
+		{'', 'group:stick', ''},
 	}
 })
 
