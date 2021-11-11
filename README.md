@@ -9,5 +9,5 @@ The Infinity Tools [infinitytools] mod for Minetest provides compressed mese whi
 [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ### Graphics
-(c) 2012 Vortexlabs a.k.a. mrtux
+(c) 2012 Vortexlabs a.k.a. mrtux, ipushbutton2653 (blue versions)
 [CC0](https://creativecommons.org/publicdomain/zero/1.0/)
