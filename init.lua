@@ -2,9 +2,10 @@
 	InfinityTools
 	Author: Vortexlabs (mrtux)
 	Edited a bit by AndDT for minetest 0.4.6
+	See See README.md for further information.
 	Licencing info:
 		Code: GPLv3
-		Graphics: WTFPL
+		Graphics: See README.md
 ]]--
 
 -- Register nodes and tools
