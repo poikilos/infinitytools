@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [git] - 2011-11-11
 (Poikilos)
 ### Changed
+- resize all tools to 32x32 using nearest pixel scaling, then retouch them by hand.
+
+
+## [git] - 2011-11-11
+(Poikilos)
+### Changed
 - Pixel graphics from linux-minetest-kit-190204 are restored
   (previous commit) to the ipushbutton2653 graphics (blue versions),
   but resolutions are odd for:
