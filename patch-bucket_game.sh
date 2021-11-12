@@ -1,4 +1,26 @@
 #!/bin/bash
+cat > /dev/null <<END
+This script overwrites the bucket_game versions of the textures,
+and adds/overwrites any $_infinity_readme or $_infinity_changelog in
+BUCKET_GAME/mods/coderbuild/infinitytools as well (the documentation
+filenames will be prepended with "infinitytools-" if the infinitytools
+are defined in coderblocks).
+- doesn't overwrite any text files, but instead prepends "infinitytools-"
+  to the readme and changelog.
+- changes the filenames from my repo to bucket_game 211111a naming before
+  patching
+- ensures that each filename exists in bucket_game before continuing, to
+  prevent mistaken filenames
+
+This patch renames the files in this repo to the bucket_game naming
+in a temporary directory before patching.
+- If coderbuild/infinitytools is a directory, the ipushbutton2653
+  texture naming is used.
+- If coderbuild/coderblocks/infinitytools.lua is detected, the
+  bucket_game 211111a texture naming is used.
+- The naming scheme is verified to exist on the destination
+  before patching will continue.
+END
 
 . repo_naming.rc
 # ^ Variables in src_naming.rc represent the source filenames and should
@@ -60,22 +82,6 @@ do
     fi
 done
 
-cat <<END
-This script overwrites the bucket_game versions of the textures,
-and adds/overwrites any $_infinity_readme or $_infinity_changelog in
-BUCKET_GAME/mods/coderbuild/infinitytools as well (the documentation
-filenames will be prepended with "infinitytools-" if the infinitytools
-are defined in coderblocks).
-
-This patch renames the files in this repo to the bucket_game naming
-in a temporary directory before patching.
-- If coderbuild/infinitytools is a directory, the ipushbutton2653
-  texture naming is used.
-- If coderbuild/coderblocks/infinitytools.lua is detected, the
-  bucket_game 211111a texture naming is used.
-- The naming scheme is verified to exist on the destination
-  before patching will continue.
-END
 
 
 if [ "@$BUCKET_GAME" = "@" ]; then
