@@ -105,7 +105,7 @@ if [ ! -d "$BUCKET_GAME/$_dest_mod_relative_subdir" ]; then
         printf "trying 211111a naming..."
         _compressed_mese="infinity_compressedmese.png"
         _infinity_block="infinity_block.png"
-        _dest_mod_relative_subdir="mods/coderbuild/coderblocks/textures"
+        _dest_mod_relative_subdir="mods/coderbuild/coderblocks"
         _infinity_readme="infinitytools-README.md"
         _infinity_changelog="infinitytools-changelog.md"
         # ^ These are the new bucket_game 211111a filenames
@@ -121,10 +121,12 @@ fi
 
 for fn in $_compressed_mese $_infinity_shovel $_infinity_pick infinity_axe.png $infinityblock $_infinity_sword
 do
-    tryName="$BUCKET_GAME/$_dest_mod_relative_subdir/$fn"
+    tryName="$BUCKET_GAME/$_dest_mod_relative_subdir/textures/$fn"
     if [ ! -f "$tryName" ]; then
         echo "Error: There is no \"$tryName\", so the texture naming convention is unrecognized (Scripted patching is not implemented for your version of bucket_game)."
         exit 1
+    else
+        printf "$fn..."
     fi
 done
 
@@ -171,11 +173,12 @@ mv $_src_infinity_sword $_infinity_sword
 if [ $? -ne 0 ]; then exit; fi
 # cd "$TMP_PRJ_DIR" # These are already named in the ipushbutton2653 style
 printf "* updating textures..."
-rsync -t $TMP_TEX_DIR $BUCKET_GAME/$_dest_mod_relative_subdir
+rsync -rt $TMP_TEX_DIR/ $BUCKET_GAME/$_dest_mod_relative_subdir/textures
 if [ $? -ne 0 ]; then exit; fi
 echo "OK"
 printf "* updating projects..."
-rsync -t $TMP_PRJ_DIR $BUCKET_GAME/$_dest_mod_relative_subdir
+mkdir -p $BUCKET_GAME/$_dest_mod_relative_subdir/projects
+rsync -rt $TMP_PRJ_DIR/ $BUCKET_GAME/$_dest_mod_relative_subdir/projects
 if [ $? -ne 0 ]; then exit; fi
 echo "OK"
 if [ -f "$BUCKET_GAME/$_dest_mod_relative_subdir/$_infinity_readme" ]; then
