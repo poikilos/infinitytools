@@ -1,0 +1,12 @@
+
+_src_compressed_mese="infinitytools_compressed_mese.png"
+_src_infinity_block="infinitytools_infinity_block.png"
+# ^ These 2 are changed later if bucket_game 211111a detected; if the
+#   script still fails, change these, and the others below if they fail.
+_src_infinity_pick="infinitytools_pick.png"
+_src_infinity_shovel="infinitytools_shovel.png"
+_src_infinity_sword="infinitytools_sword.png"
+_src_infinity_axe="infinitytools_axe.png"
+
+# ^ These represent the naming and should only change if the poikilos
+#   repo naming changes.
